@@ -17,6 +17,8 @@ public class Test {
 
     @org.junit.Test
     public void insertStu() {
+        System.out.println();
+        System.out.println();
         StuService proxyInstance = (StuService) ProxyFactory.getProxyInstance(StudentServiceimpl.class);
         int flag = proxyInstance.insertStu(new Student("A0013", "黄志敏", 20, "C0003"));
         System.out.println(flag);

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bjpowernode.dao.StudentDao">
+
+    <insert id="insertStu">
+        insert into stu (id,name,age) value (#{id},#{name},#{age})
+    </insert>
+
+    <delete id="daleteById">
+        delete from stu where id=#{id}
+    </delete>
+
+    <select id="selectById" resultType="com.bjpowernode.domain.Student">
+        select * from stu where id=#{id}
+    </select>
+
+    <update id="updateStu">
+        update stu set id=#{id}, name=#{name}, age=#{age} where id=#{id}
+    </update>
+
+    <select id="selectAll" resultType="com.bjpowernode.domain.Student">
+        select  * from stu
+    </select>
+
+    <select id="selectLikeName1" resultType="String">
+        select name from stu where name like '%' #{name} '%'
+    </select>
+
+    <select id="selectLikeName2" resultType="com.bjpowernode.domain.Student">
+        select name from stu where name like '%' #{name} '%'
+    </select>
+
+    <select id="selectStu" resultType="com.bjpowernode.domain.Student">
+        select * from stu where name=#{name} and age=#{age}
+    </select>
+
+    <select id="selectAll2" resultType="Map">
+        select * from stu
+    </select>
+
+    <resultMap id="Student" type="com.bjpowernode.domain.Student">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="age" column="age"/>
+    </resultMap>
+
+    <select id="selectAll3" resultMap="Student">
+        select * from stu
+    </select>
+</mapper>

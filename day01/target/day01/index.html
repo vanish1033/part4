@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="/myWeb/js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript">
+
+        $(a);
+
+        function a() {
+            $.ajax({
+                "type": "get",
+                "url": "/myWeb/test.do",
+                "data": {"name": "mike", "age": 25},
+                "dataType": "text",
+                "success": function () {
+                    alert("callback被调用")
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

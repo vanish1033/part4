@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="day02" />
+        <module name="day01" />
+        <module name="day02_myself" />
+        <module name="Wednesday_Test" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="day01" target="1.8" />
+      <module name="day02" target="1.8" />
+      <module name="day02_myself" target="1.8" />
+      <module name="dayo1_test" target="1.8" />
+      <module name="Wednesday_Test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    <mapper namespace="dao.StudentDao">
+
+    <select id="selectOne" parameterType="java.lang.String" resultType="domain.Student">
+        select * from stu where id=#{id}
+    </select>
+
+    <select id="selectAll" resultType="domain.Student">
+        select * from stu
+    </select>
+
+    <insert id="insertOne" parameterType="domain.Student">
+        insert into stu (id,name,age) value (#{id},#{name},#{age})
+    </insert>
+
+    <delete id="deleteOne">
+        delete from stu where id = #{id}
+    </delete>
+
+    <update id="updateOne">
+        update stu set name=#{name}, age=#{age} where id = #{id}
+    </update>
+
+</mapper>
